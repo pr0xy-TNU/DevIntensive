@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">DevIntensive</string>
+
+    <string name="app_name">"Токарь Ярослав"</string>
+
+    <string name="mobile_number">Мобильный номер</string>
+    <string name="my_phone">2245-33-89</string>
+
+    <string name="email">E-mail</string>
+    <string name="my_email">yaroslav-tokar@yandex.ru</string>
+
+    <string name="vk_profile">Профиль в VK</string>
+    <string name="my_vk">vk.com/yaroslav_tokar</string>
+
+    <string name="repository">Репозиторий</string>
+    <string name="my_repository">https://github.com/pr0xy-TNU/DevIntensive-1.git</string>
+
+    <string name="rating">Рейтинг</string>
+    <string name="my_rating">5</string>
+
+    <string name="code_strings_number">Написано строк кода</string>
+    <string name="my_code_strings_number">5</string>
+
+    <string name="projects_number">Проектов</string>
+    <string name="my_projects_number">5</string>
+
+    <string name="about">О себе</string>
+    <string name="my_about">About information: about information.. about information..
+    about information.. about information.. about information.. about information..
+    about information.. about information.. about information.. about information..
+    about information.. about information.. about information.. about information..
+    about information.. about information.. about information.. about information..
+    about information.. about information.. about information.. about information..
+    </string>
+
 </resources>

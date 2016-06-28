@@ -3,20 +3,32 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <!--Sizes-->
-
+    <!-- Sizes. -->
+    <dimen name="size_tiny_8">8dp</dimen>
     <dimen name="size_small_24">24dp</dimen>
-    <dimen name="size_medium_56">54dp</dimen>
-    <dimen name="size_large_76">72dp</dimen>
+    <dimen name="size_medial_48">48dp</dimen>
+    <dimen name="size_medium_56">56dp</dimen>
+    <dimen name="size_big_72">72dp</dimen>
+    <dimen name="size_large_80">80dp</dimen>
+    <dimen name="size_huge_96">96dp</dimen>
+    <dimen name="size_huger_104">104dp</dimen>
 
-    <!--Spaces-->
-
+    <!-- Spaces. -->
     <dimen name="spacing_small_8">8dp</dimen>
     <dimen name="spacing_normal_16">16dp</dimen>
-    <dimen name="spacing_medium_24">24dp</dimen>
+    <dimen name="spacing_medial_24">24dp</dimen>
     <dimen name="spacing_medium_32">32dp</dimen>
-    <dimen name="spacing_large_56">56dp</dimen>
+    <dimen name="spacing_upper_48">48dp</dimen>
+    <dimen name="spacing_big_56">56dp</dimen>
     <dimen name="spacing_large_72">72dp</dimen>
 
+    <dimen name="line_size">1dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="nested_scroll_view_height">32dp</dimen>
+
+    <!-- Fonts. -->
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
 
 </resources>
