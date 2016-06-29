@@ -1,205 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.activities.MainActivity">
 
-    <LinearLayout
+<android.support.v4.widget.DrawerLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activities.MainActivity"
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_coordinator_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:theme="@style/AppTheme.PoupupOverlay"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--Toolbar top-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_huger_104"
+                    android:background="@color/grey"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/linear_layout_totals"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/rating_count_text"
+                            style="@style/text"
+                            android:text="@string/my_rating"
+                            android:textSize="@dimen/font_size_24"/>
+
+                        <TextView
+                            style="@style/text"
+                            android:text="@string/rating"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/vertical_line"/>
+
+                    <LinearLayout
+                        style="@style/linear_layout_totals"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/code_strings_count_text"
+                            style="@style/text"
+                            android:text="@string/my_code_strings_number"
+                            android:textSize="@dimen/font_size_24"/>
+
+                        <TextView
+                            style="@style/text"
+                            android:text="@string/code_strings_number"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/vertical_line"/>
+
+                    <LinearLayout
+                        style="@style/linear_layout_totals"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/project_count_text"
+                            style="@style/text"
+                            android:text="@string/my_projects_number"
+                            android:textSize="@dimen/font_size_24"/>
+
+                        <TextView
+                            style="@style/text"
+                            android:text="@string/projects_number"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- user info -->
+
+                <LinearLayout
+                    style="@style/linear_layout">
+
+                    <ImageView
+                        android:id="@+id/call_img"
+                        style="@style/icon.left"
+                        android:src="@drawable/ic_phone_black_24dp"/>
+
+                    <LinearLayout
+                        style="@style/linear_layout.input">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/linear_layout_asdw_til"
+                            >
+
+                            <EditText
+                                android:id="@+id/phone_et"
+                                style="@style/linear_layout_et"
+                                android:hint="@string/mobile_number"
+                                android:inputType="phone"
+                                android:text="@string/my_phone"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_cancel"
+                        style="@style/icon.right"
+                        android:src="@drawable/ic_phone_in_talk_black_24dp"
+                        />
+                </LinearLayout>
+
+                <View
+                    style="@style/separate_line"/>
+
+                <LinearLayout
+                    style="@style/linear_layout">
+
+                    <ImageView
+                        style="@style/icon.left"
+                        android:src="@drawable/ic_email_black_24dp"/>
+
+                    <LinearLayout
+                        style="@style/linear_layout.input">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/linear_layout_asdw_til"
+                            >
+
+                            <EditText
+                                android:id="@+id/email_et"
+                                style="@style/linear_layout_et"
+                                android:hint="@string/email"
+                                android:inputType="textEmailAddress"
+                                android:text="@string/my_email"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/icon.right"
+                        android:src="@drawable/ic_send_black_24dp"
+                        />
+                </LinearLayout>
+
+                <View
+                    style="@style/separate_line"/>
+
+                <LinearLayout
+                    style="@style/linear_layout">
+
+                    <ImageView
+                        style="@style/icon.left"
+                        android:src="@drawable/vk"/>
+
+                    <LinearLayout
+                        style="@style/linear_layout.input">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/linear_layout_asdw_til"
+                            >
+
+                            <EditText
+                                android:id="@+id/vk_et"
+                                style="@style/linear_layout_et"
+                                android:hint="@string/vk_profile"
+                                android:text="@string/my_vk"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/icon.right"
+                        android:src="@drawable/ic_visibility_black_24dp"
+                        />
+                </LinearLayout>
+
+                <View
+                    style="@style/separate_line"/>
+
+                <LinearLayout
+                    style="@style/linear_layout">
+
+                    <ImageView
+                        style="@style/icon.left"
+                        android:src="@drawable/github_box"/>
+
+                    <LinearLayout
+                        style="@style/linear_layout.input">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/linear_layout_asdw_til"
+                            >
+
+                            <EditText
+                                android:id="@+id/repository_et"
+                                style="@style/linear_layout_et"
+                                android:hint="@string/repository"
+                                android:text="@string/my_repository"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/icon.right"
+                        android:src="@drawable/ic_visibility_black_24dp"
+                        />
+                </LinearLayout>
+
+                <View
+                    style="@style/separate_line"/>
+
+                <LinearLayout
+                    style="@style/linear_layout">
+
+                    <ImageView
+                        style="@style/icon.left"
+                        android:src="@drawable/information_outline"/>
+
+                    <LinearLayout
+                        style="@style/linear_layout.input.wrap_content">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/linear_layout_asdw_til"
+                            >
+
+                            <EditText
+                                android:id="@+id/about"
+                                style="@style/linear_layout_et"
+                                android:hint="@string/about"
+                                android:text="@string/my_about"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/icon.right"
+                        android:src="@drawable/ic_visibility_black_24dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_gravity="left"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu"
+        >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size_huger_104"
-            android:background="@color/grey"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                style="@style/linear_layout_totals"
-                android:layout_weight="1">
-                <TextView
-                    style="@style/text"
-                    android:id="@+id/rating_count_text"
-                    android:text="@string/my_rating"
-                    android:textSize="@dimen/font_size_24"/>
-                <TextView
-                    style="@style/text"
-                    android:text="@string/rating"/>
-            </LinearLayout>
-
-            <View
-                style="@style/vertical_line"/>
-
-            <LinearLayout
-                style="@style/linear_layout_totals"
-                android:layout_weight="2">
-                <TextView
-                    style="@style/text"
-                    android:id="@+id/code_strings_count_text"
-                    android:text="@string/my_code_strings_number"
-                    android:textSize="@dimen/font_size_24"/>
-                <TextView
-                    style="@style/text"
-                    android:text="@string/code_strings_number"/>
-            </LinearLayout>
-
-            <View
-                style="@style/vertical_line"/>
-
-            <LinearLayout
-                style="@style/linear_layout_totals"
-                android:layout_weight="1">
-                <TextView
-                    style="@style/text"
-                    android:id="@+id/project_count_text"
-                    android:text="@string/my_projects_number"
-                    android:textSize="@dimen/font_size_24"/>
-                <TextView
-                    style="@style/text"
-                    android:text="@string/projects_number"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- user info -->
-
-        <LinearLayout
-            style="@style/linear_layout">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_phone_black_24dp"/>
-            <LinearLayout
-                style="@style/linear_layout.input">
-                <android.support.design.widget.TextInputLayout
-                    style="@style/linear_layout_asdw_til"
-                    >
-                    <EditText
-                        style="@style/linear_layout_et"
-                        android:id="@+id/phone_et"
-                        android:hint="@string/mobile_number"
-                        android:inputType="phone"
-                        android:text="@string/my_phone"
-                        />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_phone_in_talk_black_24dp"
-                />
-        </LinearLayout>
-
-        <View
-            style="@style/separate_line"/>
-
-        <LinearLayout
-            style="@style/linear_layout">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_email_black_24dp"/>
-            <LinearLayout
-                style="@style/linear_layout.input">
-                <android.support.design.widget.TextInputLayout
-                    style="@style/linear_layout_asdw_til"
-                    >
-                    <EditText
-                        style="@style/linear_layout_et"
-                        android:id="@+id/email_et"
-                        android:hint="@string/email"
-                        android:inputType="textEmailAddress"
-                        android:text="@string/my_email"
-                        />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_send_black_24dp"
-                />
-        </LinearLayout>
-
-        <View
-            style="@style/separate_line"/>
-
-        <LinearLayout
-            style="@style/linear_layout">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/vk"/>
-            <LinearLayout
-                style="@style/linear_layout.input">
-                <android.support.design.widget.TextInputLayout
-                    style="@style/linear_layout_asdw_til"
-                    >
-                    <EditText
-                        style="@style/linear_layout_et"
-                        android:id="@+id/vk_et"
-                        android:hint="@string/vk_profile"
-                        android:text="@string/my_vk"
-                        />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_visibility_black_24dp"
-                />
-        </LinearLayout>
-
-        <View
-            style="@style/separate_line"/>
-
-        <LinearLayout
-            style="@style/linear_layout">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/github_box"/>
-            <LinearLayout
-                style="@style/linear_layout.input">
-                <android.support.design.widget.TextInputLayout
-                    style="@style/linear_layout_asdw_til"
-                    >
-                    <EditText
-                        style="@style/linear_layout_et"
-                        android:id="@+id/repository_et"
-                        android:hint="@string/repository"
-                        android:text="@string/my_repository"
-                        />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_visibility_black_24dp"
-                />
-        </LinearLayout>
-
-        <View
-            style="@style/separate_line"/>
-
-        <LinearLayout
-            style="@style/linear_layout">
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/information_outline"/>
-            <LinearLayout
-                style="@style/linear_layout.input.wrap_content">
-                <android.support.design.widget.TextInputLayout
-                    style="@style/linear_layout_asdw_til"
-                    >
-                    <EditText
-                        style="@style/linear_layout_et"
-                        android:id="@+id/about"
-                        android:hint="@string/about"
-                        android:text="@string/my_about"
-                        />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_visibility_black_24dp"
-                />
-        </LinearLayout>
-
-    </LinearLayout>
-
-</android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
